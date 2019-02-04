@@ -67,6 +67,11 @@ div#content{
     color: #75545C;
 }
 
+/*Img on Quality*/
+#meme{
+    margin: 20px;
+}
+
 /* Footer */
 footer{
     width:100%;
