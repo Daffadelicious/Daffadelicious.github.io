@@ -1,0 +1,31 @@
+/*
+  This is the style sheet for the Weather Site
+
+  CSS Table of Contents
+    1. Imports
+    2. General
+    3. Mobile first rules
+    4. Larger screen rules
+*/
+
+/* Section 1 - Imports */
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+@import url('normalize.css');
+
+/* Section 2 - General Rules */
+header{
+    background-color: #0E89D5;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Sansita', sans-serif;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+/* Section 3 - Mobile Rules */
+
+/* Section 4 - Larger Rules */
