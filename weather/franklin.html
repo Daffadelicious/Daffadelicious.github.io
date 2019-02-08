@@ -5,48 +5,38 @@
         <title>Franklin, ID | Weather Site</title>
         <meta name="description" content="Weather page for Franklin Idaho">
         <meta name="viewport" content="width=device-width">
-        <link href="screen.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="css/normalize.css" rel="sytlesheet" type="text/css" media="screen">
     </head>
     <body>
         <header>
-            <img alt="weather site logo" src= "/weather/images/logo.jpg">
+            <img id="logo" alt="weather site logo" src= "/weather/images/logo.jpg">
             <h1><strong>The Weather Site</strong></h1>
         </header>
-        <nav>
-            <ul>
-                <li><a href="franklin.html" title="Go to Weather Site home page">Current</a></li>
-                <li><a href="franklin.html" title="Go to Search Page">Search</a></li>
-                <li><a href="franklin.html" title="Go to Franklin's weather page">Franklin</a></li>
-                <li><a href="franklin.html" title="Go to Greenville's weather page">Greenville</a></li>
-            </ul>
-        </nav>
         <main>
             <h2>Franklin, Idaho</h2>
-            <ul>
-                <li><strong>Zip: </strong>83237 |</li>
-                <li><strong>Elevation: </strong>4968 ft. |</li>
-                <li><strong>Location: </strong>42.07&deg; N, 111.79&deg; W |</li>
-            </ul>
-
-            <section class="details">
-                <h3><strong>Temperature</strong></h3>
-                <h1>24&deg;F</h1>
-                <p>34&deg;F  21&deg;F</p>
-                <p>Feels Like 25&deg;F</p>
+            <section id="locInfo">
+                <strong>Zip: </strong>83237 | <strong>Elevation: </strong>4968 ft. | <strong>Location: </strong>42.07&deg; N, 111.79&deg; W |
             </section>
-            <section class="details">
-                <h3><strong>Wind</strong></h3>
-                <img alt="wind pointer" src="/weather/images/wind-pointer.png">
-                <p>2 mph</p>
-                <p><strong>Direction: </strong>NW</p>
-                <p><strong>Gusts: </strong> 5mph</p>
-            </section>
-            <section class="details">
-                <h3><strong>Clear</strong></h3>
-                <img alt="clear weather" src="/weather/images/clear.jpg">
-            </section>
-
-            <section id="bottom-section">
+            <div id="cur-weather">
+                <section id="temperature" class="tile">
+                    <h3><strong>Temperature</strong></h3>
+                    <h1>24&deg;F</h1>
+                    <p>34&deg;F  21&deg;F</p>
+                    <p>Feels Like 25&deg;F</p>
+                </section>
+                <section id="wind" class="tile">
+                    <h3><strong>Wind</strong></h3>
+                    <img alt="wind pointer" src="/weather/images/wind-pointer.png">
+                    <p>2 mph</p>
+                    <p><strong>Direction: </strong>NW</p>
+                    <p><strong>Gusts: </strong> 5mph</p>
+                </section>
+                <section id="summary" class="tile">
+                    <h3><strong>Clear</strong></h3>
+                </section>
+            </div>
+            <section id="hourly">
                 <h2><strong>Hourly Forecast</strong></h2>
                 <ul>
                    <li>10am: 41&deg;F | </li>
@@ -68,5 +58,13 @@
         <footer>
             &copy; 2/1/2019 &mdash; The Weather Site
         </footer>
+        <nav>
+            <ul>
+                <li><a href="franklin.html" title="Go to Weather Site home page">Current</a></li>
+                <li><a href="franklin.html" title="Go to Search Page">Search</a></li>
+                <li><a href="franklin.html" title="Go to Franklin's weather page">Franklin</a></li>
+                <li><a href="franklin.html" title="Go to Greenville's weather page">Greenville</a></li>
+            </ul>
+        </nav>
     </body>
 </html>
