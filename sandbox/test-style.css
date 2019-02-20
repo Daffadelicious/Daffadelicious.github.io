@@ -1,0 +1,23 @@
+/* Imports */
+
+/* General */
+
+/* Mobile Styles */
+
+body{
+    background-color: lightcoral;
+}
+
+/* Large Styles */
+@media screen and (min-width: 700px){
+
+    body{
+    background-color: lightpink;
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+    }
+}

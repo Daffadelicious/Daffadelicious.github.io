@@ -9,11 +9,11 @@
         <link href="css/normalize.css" rel="stylesheet" type="text/css" media="screen">
     </head>
     <body>
-        <header>
+        <header id="page-header">
             <img id="logo" alt="weather site logo" src= "/weather/images/logo.jpg">
             <h1 id="main-head"><strong>The Weather Site</strong></h1>
         </header>
-        <nav>
+        <nav id="page-nav">
             <ul>
                 <li><a href="franklin.html" title="Go to Weather Site home page">Current</a></li>
                 <li><a href="franklin.html" title="Go to Search Page">Search</a></li>
@@ -21,22 +21,25 @@
                 <li><a href="franklin.html" title="Go to Greenville's weather page">Greenville</a></li>
             </ul>
         </nav>
-        <main>
+        <main id="page-content">
             <h2>Franklin, Idaho</h2>
-            <section id="locInfo">
-                <strong>Zip: </strong>83237 | <strong>Elevation: </strong>1514.246 ft. | <strong>Location: </strong>42.07&deg; N, 111.79&deg; W |
-            </section>
+                <ul>
+                    <li><strong>Zip: </strong>83237 | </li>
+                    <li><strong>Elevation: </strong>1514.246 ft. | </li>
+                    <li><strong>Location: </strong>42.07&deg; N, 111.79&deg; W |</li>
+                </ul>
             <div id="cur-weather">
                 <section id="temperature" class="tile">
                     <h3><strong>Temperature</strong></h3>
                     <p id="cur-temp">40&deg;F</p>
                     <p id="high" class="temp">64&deg;F</p>
                     <p id="low" class="temp">41&deg;F</p>
+                    <p id="feels-like">Feels like 40&deg;F</p>
                 </section>
                 <section id="wind" class="tile">
                     <h3><strong>Wind</strong></h3>
                     <div id="rotate">
-                        <img alt="Wind Pointer" src="/weather/images/wind-pointer.png">
+                        <img id="wind-pointer" alt="Wind Pointer" src="/weather/images/wind-pointer.png">
                     </div>
                     <div id="mph">5 mph</div>
                     <p><strong>Direction: </strong>SW</p>
@@ -50,19 +53,19 @@
             <section id="hourly" class="tile">
                 <h2><strong>Hourly Forecast</strong></h2>
                 <ul>
-                   <li>10am: 41&deg;F |</li>
-                   <li>11am: 41&deg;F | </li>
-                   <li>12am: 41&deg;F |</li>
-                   <li>1pm: 41&deg;F |</li>
-                   <li>2pm: 41&deg;F |</li>
-                   <li>3pm: 41&deg;F |</li>
-                   <li>4pm: 42&deg;F |</li>
-                   <li>5pm: 44&deg;F |</li>
-                   <li>6pm: 44&deg;F |</li>
-                   <li>7pm: 46&deg;F |</li>
-                   <li>8pm: 49&deg;F |</li>
-                   <li>9pm: 51&deg;F |</li>
-                   <li>10pm: 55&deg;F |</li> 
+                   <li>10am: 41&deg;F  |  </li>
+                   <li>11am: 41&deg;F  |  </li>
+                   <li>12am: 41&deg;F  |  </li>
+                   <li>1pm: 41&deg;F  |  </li>
+                   <li>2pm: 41&deg;F  |  </li>
+                   <li>3pm: 41&deg;F  |  </li>
+                   <li>4pm: 42&deg;F  |  </li>
+                   <li>5pm: 44&deg;F  |  </li>
+                   <li>6pm: 44&deg;F  |  </li>
+                   <li>7pm: 46&deg;F  |  </li>
+                   <li>8pm: 49&deg;F  |  </li>
+                   <li>9pm: 51&deg;F  |  </li>
+                   <li>10pm: 55&deg;F  |  </li> 
                 </ul>
             </section>
         </main>
