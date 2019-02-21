@@ -152,11 +152,14 @@ footer{
 /* Section 3 - Mobile Rules */
 
 #mph{
-    font-size: 23px;
+    font-size: 18px;
     position: absolute;
-    top: 410px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 33%;
+    left: 45%;
+}
+
+#wind{
+    position: relative;
 }
 
 
@@ -192,8 +195,8 @@ footer{
     }
 
     #mph{
-        left: 46%;
-        top: 250px;
+        left: 44%;
+        top: 35%;
     }
 
     #summary img{
