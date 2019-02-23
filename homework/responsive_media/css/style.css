@@ -159,13 +159,23 @@ h1 {
 	font-size: .8em;
 }
 
+@media screen and (max-width: 800px){
+	#lg-img{
+		display: none;
+	}
+}
+
 
 /********************************
 * Medium Screen Styles
 * 750px viewport / 18px font = 41.67em
 ********************************/
 
-@media (min-width: 41.67em) {
+@media (min-width: 800px) {
+	#sm-img{
+		display: none;
+	}
+
 	body {
 		font-size: 1.25em;
 	}
@@ -235,5 +245,9 @@ h1 {
 		max-width: 80%;
 		padding-right: 2em;
 		padding-left: 2em;
+	}
+
+	#sm-img{
+		display: none;
 	}
 }
