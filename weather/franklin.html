@@ -31,16 +31,14 @@
             <div id="cur-weather">
                 <section id="temperature" class="tile">
                     <h3><strong>Temperature</strong></h3>
-                    <p id="cur-temp">40&deg;F</p>
+                    <p id="curTemp">40&deg;F</p>
                     <p id="high" class="temp">64&deg;F</p>
                     <p id="low" class="temp">41&deg;F</p>
-                    <p id="feels-like">Feels like 40&deg;F</p>
+                    <p id="feelsLike"></p>
                 </section>
                 <section id="wind" class="tile">
                     <h3><strong>Wind</strong></h3>
-                    <div id="rotate">
-                        <img id="wind-pointer" alt="Wind Pointer" src="/weather/images/wind-pointer.png">
-                    </div>
+                    <div id="dial" class="w"></div>
                     <div id="mph">5 mph</div>
                     <p><strong>Direction: </strong>SW</p>
                     <p><strong>Gusts: </strong> 10-12mph</p>
@@ -76,5 +74,6 @@
         <footer>
             &copy; 2/1/2019 &mdash; The Weather Site
         </footer>
-    </body>
+        <script src="/weather/js/functions.js"></script>
+    </body> 
 </html>
