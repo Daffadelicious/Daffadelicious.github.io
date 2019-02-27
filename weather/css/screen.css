@@ -162,11 +162,9 @@ footer{
     position: relative;
 }
 
-@media screen and (max-width: 800px){
-    #lg-curImg{
-        display: none;
-    }
-}
+/* @media screen and (max-width: 800px){
+
+} */
 
 
 /* Section 4 - Larger Rules */
@@ -201,10 +199,6 @@ footer{
     #mph{
         left: 42%;
         top: 25%;
-    }
-
-    #sm-curImg{
-        display: none;
     }
 
     #hourly ul li{

@@ -47,8 +47,11 @@
                 </section>
                 <section id="summary" class="tile">
                     <h3><strong>Rainy</strong></h3>
-                    <img id="sm-curImg" alt="Rainy Weather" src="images/rain_300.jpg">
-                    <img id="lg-curImg" alt ="Rainy Weather" src="images/rain_400.jpg">
+                    <picture>
+                        <source media ="(max-width: 800px)" srcset="images/rain_300.jpg">
+                        <source media ="(min-width: 800px)" srcset="images/rain_400.jpg">
+                        <img alt="Rainy Weather" src="images/rain_400.jpg>
+                    </picture>
                 </section>
             </div>
             <section id="hourly" class="tile">
