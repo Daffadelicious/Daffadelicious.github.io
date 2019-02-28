@@ -152,8 +152,49 @@ body{
     text-align: center;
 }
 
-#summary img{
-    max-width: 100%;
+.clear{
+    background-image: url("/weather/images/clear_300.jpg");
+    background-repeat: no-repeat;
+    margin: -.6em auto 0;
+    margin-top: 5px;
+    width: 300px;
+    height: 200px;
+}
+
+.cloudy{
+    background-image: url("/weather/images/clouds_300.jpg");
+    background-repeat: no-repeat;
+    margin: -.6em auto 0;
+    margin-top: 5px;
+    width: 300px;
+    height: 320px;
+}
+
+.fog{
+    background-image: url("/weather/images/fog_300.jpg");
+    background-repeat: no-repeat;
+    margin: -.6em auto 0;
+    margin-top: 5px;
+    width: 300px;
+    height: 200px;
+}
+
+.rain{
+    background-image: url("/weather/images/rain_300.jpg");
+    background-repeat: no-repeat;
+    margin: -.6em auto 0;
+    margin-top: 5px;
+    width: 300px;
+    height: 220px;
+}
+
+.snow{
+    background-image: url("/weather/images/snow_300.jpg");
+    background-repeat: no-repeat;
+    margin: -.6em auto 0;
+    margin-top: 5px;
+    width: 300px;
+    height: 200px;
 }
 
 footer{
@@ -231,6 +272,51 @@ footer{
     #mph{
         left: 42%;
         top: 25%;
+    }
+
+    .clear{
+        background-image: url("/weather/images/clear_400.jpg");
+        background-repeat: no-repeat;
+        margin: -.6em auto 0;
+        margin-top: 5px;
+        width: 400px;
+        height: 200px;
+    }
+    
+    .cloudy{
+        background-image: url("/weather/images/clouds_400.jpg");
+        background-repeat: no-repeat;
+        margin: -.6em auto 0;
+        margin-top: 5px;
+        width: 400px;
+        height: 200px;
+    }
+    
+    .fog{
+        background-image: url("/weather/images/fog_400.jpg");
+        background-repeat: no-repeat;
+        margin: -.6em auto 0;
+        margin-top: 5px;
+        width: 400px;
+        height: 200px;
+    }
+    
+    .rain{
+        background-image: url("/weather/images/rain_400.jpg");
+        background-repeat: no-repeat;
+        margin: -.6em auto 0;
+        margin-top: 5px;
+        width: 400px;
+        height: 200px;
+    }
+    
+    .snow{
+        background-image: url("/weather/images/snow_400.jpg");
+        background-repeat: no-repeat;
+        margin: -.6em auto 0;
+        margin-top: 5px;
+        width: 400px;
+        height: 200px;
     }
 
     #hourly ul li{
