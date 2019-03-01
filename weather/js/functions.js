@@ -151,15 +151,13 @@ function changeSummaryImage(weather){
 }   
 
 
-// Gets info from elevation on html
+// Gets info from elevation on html and stores it in var meters
 let meters = document.getElementById("elevation").innerText;
 
 function convertMeters(meters){
     feet = Math.floor(meters * 3.28);
     return feet;
 }
-// Calls convertMeters 
-let test = convertMeters(meters);
-// Stores conversion into span "elevation"
-document.getElementById("elevation").innerText = test;
-console.log(test);
+
+// Calls convertMeters and stores it into span "elevation"
+document.getElementById("elevation").innerText = convertMeters(meters);
