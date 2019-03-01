@@ -152,8 +152,7 @@ body{
     text-align: center;
 }
 
-.clear{
-    background-image: url("/weather/images/clear_300.jpg");
+#weatherPic{
     background-repeat: no-repeat;
     margin: -.6em auto 0;
     margin-top: 5px;
@@ -161,40 +160,26 @@ body{
     height: 200px;
 }
 
+.clear{
+    background-image: url("/weather/images/clear_300.jpg");
+}
+
 .cloudy{
     background-image: url("/weather/images/clouds_300.jpg");
-    background-repeat: no-repeat;
-    margin: -.6em auto 0;
-    margin-top: 5px;
-    width: 300px;
     height: 320px;
 }
 
 .fog{
     background-image: url("/weather/images/fog_300.jpg");
-    background-repeat: no-repeat;
-    margin: -.6em auto 0;
-    margin-top: 5px;
-    width: 300px;
-    height: 200px;
 }
 
 .rain{
     background-image: url("/weather/images/rain_300.jpg");
-    background-repeat: no-repeat;
-    margin: -.6em auto 0;
-    margin-top: 5px;
-    width: 300px;
     height: 220px;
 }
 
 .snow{
     background-image: url("/weather/images/snow_300.jpg");
-    background-repeat: no-repeat;
-    margin: -.6em auto 0;
-    margin-top: 5px;
-    width: 300px;
-    height: 200px;
 }
 
 footer{
@@ -235,11 +220,6 @@ footer{
     position: relative;
 }
 
-/* @media screen and (max-width: 800px){
-
-} */
-
-
 /* Section 4 - Larger Rules */
 @media screen and (min-width: 800px){
     #logo{
@@ -274,49 +254,31 @@ footer{
         top: 25%;
     }
 
-    .clear{
-        background-image: url("/weather/images/clear_400.jpg");
-        background-repeat: no-repeat;
+    #weatherPic{
         margin: -.6em auto 0;
         margin-top: 5px;
         width: 400px;
-        height: 200px;
+        height: 200px;  
+    }
+
+    .clear{
+        background-image: url("/weather/images/clear_400.jpg");
     }
     
     .cloudy{
         background-image: url("/weather/images/clouds_400.jpg");
-        background-repeat: no-repeat;
-        margin: -.6em auto 0;
-        margin-top: 5px;
-        width: 400px;
-        height: 200px;
     }
     
     .fog{
         background-image: url("/weather/images/fog_400.jpg");
-        background-repeat: no-repeat;
-        margin: -.6em auto 0;
-        margin-top: 5px;
-        width: 400px;
-        height: 200px;
     }
     
     .rain{
         background-image: url("/weather/images/rain_400.jpg");
-        background-repeat: no-repeat;
-        margin: -.6em auto 0;
-        margin-top: 5px;
-        width: 400px;
-        height: 200px;
     }
     
     .snow{
         background-image: url("/weather/images/snow_400.jpg");
-        background-repeat: no-repeat;
-        margin: -.6em auto 0;
-        margin-top: 5px;
-        width: 400px;
-        height: 200px;
     }
 
     #hourly ul li{

@@ -129,18 +129,23 @@ function changeSummaryImage(weather){
     switch(weather){
         case "Clear":
         weatherPic.setAttribute("class", "clear");
+        document.getElementById("weatherTitle").innerText = "Clear";
         break;
         case "Clouds":
         weatherPic.setAttribute("class", "cloudy");
+        document.getElementById("weatherTitle").innerText = "Cloudy";
         break;
         case "Fog":
         weatherPic.setAttribute("class", "fog");
+        document.getElementById("weatherTitle").innerText = "Foggy";
         break;
         case "Rain":
         weatherPic.setAttribute("class", "rain");
+        document.getElementById("weatherTitle").innerText = "Rainy";
         break;
         case "Snow":
         weatherPic.setAttribute("class", "snow");
+        document.getElementById("weatherTitle").innerText = "Snowy";
         break;
     }
 }   
@@ -155,4 +160,6 @@ function convertMeters(meters){
 }
 // Calls convertMeters 
 let test = convertMeters(meters);
+// Stores conversion into span "elevation"
+document.getElementById("elevation").innerText = test;
 console.log(test);
