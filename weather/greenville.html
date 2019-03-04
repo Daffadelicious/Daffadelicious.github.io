@@ -2,7 +2,7 @@
 <html lang=en-us>
     <head>
         <meta charset="UTF-8">
-        <title>Franklin, ID | Weather Site</title>
+        <title id="page-title">Franklin, ID | Weather Site</title>
         <meta name="description" content="Weather page for Franklin Idaho">
         <meta name="viewport" content="width=device-width">
         <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen">
@@ -15,13 +15,14 @@
         </header>
         <nav id="page-nav">
             <ul>
-                <li><a href="franklin.html" title="Go to Weather Site home page">Current</a></li>
+                <li><a href="greenville.html" title="Go to Weather Site home page">Current</a></li>
                 <li><a href="franklin.html" title="Go to Search Page">Search</a></li>
                 <li><a href="franklin.html" title="Go to Franklin's weather page">Franklin</a></li>
                 <li><a href="greenville.html" title="Go to Greenville's weather page">Greenville</a></li>
             </ul>
         </nav>
-        <main id="page-content">
+        <section id="status">Please be patient while I get your weather information.</section>
+        <main id="page-content" class="hide">
             <h2>Franklin, Idaho</h2>
                 <ul>
                     <li><strong>Zip: </strong>83237 | </li>
@@ -71,5 +72,6 @@
             &copy; 2/1/2019 &mdash; The Weather Site
         </footer>
         <script src="/weather/js/functions.js"></script>
+        <script src="/weather/js/localdata.js"></script>
     </body> 
 </html>
