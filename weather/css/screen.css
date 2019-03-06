@@ -215,9 +215,8 @@ footer{
 
 #mph{
     font-size: 18px;
-    position: absolute;
-    top: 33%;
-    left: 45%;
+    margin-top: -90px;
+    margin-bottom: 70px;
 }
 
 #wind{
@@ -252,12 +251,7 @@ footer{
     .tile{
         flex-grow: 1;
     }
-
-    #mph{
-        left: 42%;
-        top: 25%;
-    }
-
+    
     #weatherPic{
         margin: -.6em auto 0;
         margin-top: 5px;

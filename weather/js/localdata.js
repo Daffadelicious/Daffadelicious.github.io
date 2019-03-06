@@ -38,15 +38,29 @@ function fetchData(weatherURL){
     console.log('fullName is: '+fullName);
 
     // Get the temperature data
-
+    let curTemp = g.Temp;
+    let high = g.High;
+    let low = g.Low;
+    // See if it worked 
+    console.log("Temp info is: " + curTemp + " " + high + " " + low);
 
     // Get the wind data 
-
+    let windSpeed = g.Wind;
+    let gusts = g.Gusts;
+    let windDirection = g.Direction;
+    // Test
+    console.log("Wind is " + wind + ", Direction is " + direction + ", Gusts are " + gusts);
 
     // Get the current conditions
-
+    let precipitation = g.Precip;
+    let weather = g.Summary;
+    // Test
+    console.log("It is currently " + weather + " and the precipitation is " + precipitation);
 
     // Get the hourly data 
+    let hourly = g.Hourly;
+    // Test
+    console.log("The hourly data is " + hourly);
 
     // ************ Display the content ******************************
     // Set the title with the location name at the first
@@ -61,19 +75,23 @@ function fetchData(weatherURL){
 
     // Set the Location information
     // Get the h1 to display the city location
-    let contentHeading = document.getElementById('main-head');
+    let contentHeading = document.getElementById('pageHeader');
     contentHeading.innerHTML = fullName;
     // The h1 in main h1 should now say "Greenville, SC"
 
 
     // Set the temperature information
-
+    document.getElementById("curTemp").innerHTML = curTemp;
+    document.getElementById("high").innerHTML = high + "&deg;";
+    document.getElementById("low").innerHTML = low + "&deg;";
 
     // Set the wind information
-
+    document.getElementById("mph").innerHTML = windSpeed + " mph";
+    document.getElementById("gusts").innerHTML = gusts + " mph";
+    document.getElementById("direction").innerHTML = windDirection;
 
     // Set the current conditions information
-
+    
 
     // Set the hourly temperature information
 
