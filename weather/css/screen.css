@@ -151,8 +151,8 @@ body{
 }
 
 #cur-weather{
-    background-image: url(/weather/images/rain.jpg);
-    background-size: 1255px;
+    background-image: url(/weather/images/clouds_300.jpg);
+    background-size: 1500px;
     text-align: center;
 }
 

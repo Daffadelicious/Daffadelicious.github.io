@@ -2,7 +2,7 @@
 *  Weather Site JavaScript Functions
 ************************************* */
 
-fetchData(weatherURL);
+
 
 // DOM structures from webpage
 let pageNav = document.getElementById('page-nav');
@@ -10,6 +10,7 @@ let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('page-content');
 
 let weatherURL = "/weather/js/weather.json";
+fetchData(weatherURL);
 function fetchData(weatherURL){
     let cityName = 'Greenville'; // The data we want from the weather.json file
     fetch(weatherURL)
@@ -17,7 +18,7 @@ function fetchData(weatherURL){
         if(response.ok){
             return response.json();
         }
-    throw new ERROR('Network response was not OK.');
+        throw new ERROR('Network response was not OK.');
     })
     .then(function(data){
         // Check the data object that was retrieved
@@ -50,7 +51,7 @@ function fetchData(weatherURL){
     // ************ Display the content ******************************
     // Set the title with the location name at the first
     // Gets the title element so it can be worked with
-    let pageTitle = document.getElementById('page-title');
+    let pageTitle = document.getElementById('pageTitle');
     // Create a text node containing the full name 
     let fullNameNode = document.createTextNode(fullName);
     // inserts the fullName value before any other content that might exist
@@ -60,7 +61,7 @@ function fetchData(weatherURL){
 
     // Set the Location information
     // Get the h1 to display the city location
-    let contentHeading = document.getElementById('contentHeading');
+    let contentHeading = document.getElementById('main-head');
     contentHeading.innerHTML = fullName;
     // The h1 in main h1 should now say "Greenville, SC"
 
@@ -78,11 +79,11 @@ function fetchData(weatherURL){
 
 
     // Change the status of the containers
-    contentContainer.setAttribute('class', ''); // removes the hide class
-    statusContainer.setAttribute('class', 'hide'); // hides the status container
+    pageContent.setAttribute('class', ''); // removes the hide class
+    statusMessage.setAttribute('class', 'hide'); // hides the status container
   })
   .catch(function(error){
   console.log('There was a fetch problem: ', error.message);
-  statusContainer.innerHTML = 'Sorry, the data could not be processed.';
+  statusMessage.innerHTML = 'Sorry, the data could not be processed.';
   })
 }
