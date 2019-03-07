@@ -91,10 +91,15 @@ function fetchData(weatherURL){
     document.getElementById("direction").innerHTML = windDirection;
 
     // Set the current conditions information
-    
+    document.getElementById("weatherTitle").innerHTML = weather;
+    console.log(weather);
 
     // Set the hourly temperature information
-
+    var ul = document.getElementById("hourlyLI");
+    var items = ul.getElementsByTagName("li");
+    for (var i = 0; i < items.length; ++i){
+        items[i].innerHTML = hourly[i];
+    }
 
     // Change the status of the containers
     pageContent.setAttribute('class', ''); // removes the hide class

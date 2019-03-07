@@ -3,8 +3,8 @@
 ************************************* */
 
 // Variables for Function Use
-const temp = 31;
-const speed = 5;
+const temp = document.getElementById("curTemp").innerText;
+const speed = document.getElementById("mph").innerText;
 
 buildWC(speed, temp);
 
@@ -78,7 +78,7 @@ function windDial(direction){
 }
 
 // Call the getCondition Function
-let weather = getCondition("partly cloudy");
+let weather = getCondition(document.getElementById("weatherTitle").innerText);
 
 // Get Condition Function
 function getCondition(phrase){
@@ -130,23 +130,19 @@ function changeSummaryImage(weather){
     switch(weather){
         case "Clear":
         weatherPic.setAttribute("class", "clear");
-        document.getElementById("weatherTitle").innerText = "Clear";
         break;
         case "Clouds":
         weatherPic.setAttribute("class", "cloudy");
-        document.getElementById("weatherTitle").innerText = "Cloudy";
         break;
         case "Fog":
         weatherPic.setAttribute("class", "fog");
-        document.getElementById("weatherTitle").innerText = "Foggy";
         break;
         case "Rain":
         weatherPic.setAttribute("class", "rain");
-        document.getElementById("weatherTitle").innerText = "Rainy";
         break;
         case "Snow":
         weatherPic.setAttribute("class", "snow");
-        document.getElementById("weatherTitle").innerText = "Snowy";
+
         break;
     }
 }   
