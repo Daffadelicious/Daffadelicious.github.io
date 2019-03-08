@@ -2,8 +2,6 @@
 *  Weather Site JavaScript Functions
 ************************************* */
 
-
-
 // DOM structures from webpage
 let pageNav = document.getElementById('page-nav');
 let statusContainer = document.getElementById('status');
@@ -84,15 +82,24 @@ function fetchData(weatherURL){
     document.getElementById("curTemp").innerHTML = curTemp;
     document.getElementById("high").innerHTML = high + "&deg;";
     document.getElementById("low").innerHTML = low + "&deg;";
+    document.getElementById("feelsLike").innerHTML = buildWC(windSpeed, curTemp);
 
     // Set the wind information
-    document.getElementById("mph").innerHTML = windSpeed + " mph";
+    document.getElementById("mph").innerHTML = windSpeed;
     document.getElementById("gusts").innerHTML = gusts + " mph";
     document.getElementById("direction").innerHTML = windDirection;
+    windDial(windDirection);
 
     // Set the current conditions information
     document.getElementById("weatherTitle").innerHTML = weather;
     console.log(weather);
+    let summary = getCondition(weather);
+    changeSummaryImage(summary);
+
+    // Set the location information
+    let convertedElevation = convertMeters(g.Elevation);
+    console.log("Elevation converted into feet equals " + convertedElevation);
+    document.getElementById("elevation").innerHTML = convertedElevation;
 
     // Set the hourly temperature information
     var ul = document.getElementById("hourlyLI");

@@ -2,12 +2,6 @@
 *  Weather Site JavaScript Functions
 ************************************* */
 
-// Variables for Function Use
-const temp = document.getElementById("curTemp").innerText;
-const speed = document.getElementById("mph").innerText;
-
-buildWC(speed, temp);
-
 // Calculate the Windchill
 function buildWC(speed, temp){
     const feelTemp = document.getElementById('feelTemp');
@@ -25,12 +19,8 @@ function buildWC(speed, temp){
     // Display the windchill
     console.log(wc);
     wc = 'Feels like ' + wc + '&deg;F';
-    feelsLike.innerHTML = wc;
+    return wc;
 }
-
-// Call the windDial Function
-const direction = "East";
-windDial(direction);
 
 // Wind Dial Function
 function windDial(direction){
@@ -77,9 +67,6 @@ function windDial(direction){
     }
 }
 
-// Call the getCondition Function
-let weather = getCondition(document.getElementById("weatherTitle").innerText);
-
 // Get Condition Function
 function getCondition(phrase){
     let input = phrase;
@@ -108,6 +95,7 @@ function getCondition(phrase){
         case "rain":
         case "Rainy":
         case "rainy":
+        case "Thunderstorms":
             input = "Rain";
             break;
         case "snow":
@@ -120,9 +108,6 @@ function getCondition(phrase){
     console.log(input);
     return input; 
 }
-
-// Call the changeSummaryImage Function
-changeSummaryImage(weather);
 
 function changeSummaryImage(weather){
     // Get the picture container
@@ -142,22 +127,14 @@ function changeSummaryImage(weather){
         break;
         case "Snow":
         weatherPic.setAttribute("class", "snow");
-
         break;
     }
 }   
-
-
-// Gets info from elevation on html and stores it in var meters
-let meters = document.getElementById("elevation").innerText;
 
 function convertMeters(meters){
     feet = Math.floor(meters * 3.28);
     return feet;
 }
-
-// Calls convertMeters and stores it into span "elevation"
-document.getElementById("elevation").innerText = convertMeters(meters);
 
 // Convert hours into 12 hour format
 function time_format(hour){
