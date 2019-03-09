@@ -151,6 +151,8 @@ function time_format(hour){
     return hour + amPM;
 }
 
+console.log("test");
+
 // Build the hourly temperature list
 function buildHourlyData(nextHour,hourlyTemps) {
     // Data comes from a JavaScript object of hourly temp name - value pairs
@@ -170,3 +172,4 @@ function buildHourlyData(nextHour,hourlyTemps) {
 // Get the next hour based on the current time
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
+console.log(date);

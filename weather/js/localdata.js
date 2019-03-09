@@ -39,8 +39,8 @@ function fetchData(weatherURL){
     let curTemp = g.Temp;
     let high = g.High;
     let low = g.Low;
-    // See if it worked 
-    console.log("Temp info is: " + curTemp + " " + high + " " + low);
+    // Test
+    console.log("Current Temp:" + curTemp + " High Temp: " + high + " Low Temp: " + low);
 
     // Get the wind data 
     let windSpeed = g.Wind;
@@ -57,6 +57,7 @@ function fetchData(weatherURL){
 
     // Get the hourly data 
     let hourly = g.Hourly;
+
     // Test
     console.log("The hourly data is " + hourly);
 
@@ -79,7 +80,7 @@ function fetchData(weatherURL){
 
 
     // Set the temperature information
-    document.getElementById("curTemp").innerHTML = curTemp;
+    document.getElementById("curTemp").innerHTML = curTemp + "&deg;";
     document.getElementById("high").innerHTML = high + "&deg;";
     document.getElementById("low").innerHTML = low + "&deg;";
     document.getElementById("feelsLike").innerHTML = buildWC(windSpeed, curTemp);
@@ -102,11 +103,7 @@ function fetchData(weatherURL){
     document.getElementById("elevation").innerHTML = convertedElevation;
 
     // Set the hourly temperature information
-    var ul = document.getElementById("hourlyLI");
-    var items = ul.getElementsByTagName("li");
-    for (var i = 0; i < items.length; ++i){
-        items[i].innerHTML = hourly[i];
-    }
+    // document.getElementById("hourlyUL").innerHTML = buildHourlyData(4, hourly);
 
     // Change the status of the containers
     pageContent.setAttribute('class', ''); // removes the hide class
