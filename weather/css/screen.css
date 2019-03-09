@@ -219,6 +219,17 @@ footer{
     margin-bottom: 70px;
 }
 
+#move{
+    margin-top: -90px; 
+    margin-bottom: 90px;
+}
+
+#mphGV{
+    font-size: 18px;
+    margin-top: -90px;
+    margin-bottom: 70px;
+}
+
 #wind{
     position: relative;
 }
