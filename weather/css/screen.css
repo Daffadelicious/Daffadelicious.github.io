@@ -77,13 +77,13 @@ nav ul li a{
     color: white;
 }
 
-#page-content ul{
+#pageContent ul{
     margin: 0px;
     padding: 0px;
     padding-left: 3px;
     display: flex;
     list-style: none;
-    font-size: 10px;
+    font-size: 16px;
 }
 
 body{
@@ -150,8 +150,8 @@ body{
     transform: rotate(315deg);
 }
 
-#cur-weather{
-    background-image: url(/weather/images/clouds_300.jpg);
+#curWeather{
+    background-image: url(/weather/images/rain_300.jpg);
     background-size: 1500px;
     text-align: center;
 }
@@ -242,7 +242,7 @@ footer{
         margin: 0;
     }
 
-    #cur-weather{
+    #curWeather{
         background-size: 1500px;
         display: flex;
         flex-direction: row;

@@ -2,9 +2,11 @@
 *  Weather Site JavaScript Functions
 ************************************* */
 
+"use strict";
+
 // DOM structures from webpage
 let pageNav = document.getElementById('page-nav');
-let statusContainer = document.getElementById('status');
+let statusContainer = document.getElementById('statusMessage');
 let contentContainer = document.getElementById('page-content');
 
 let weatherURL = "/weather/js/weather.json";
@@ -56,10 +58,10 @@ function fetchData(weatherURL){
     console.log("It is currently " + weather + " and the precipitation is " + precipitation);
 
     // Get the hourly data 
-    let hourly = g.Hourly;
+    let hourlyData = g.Hourly;
 
     // Test
-    console.log("The hourly data is " + hourly);
+    console.log("The hourly data is " + hourlyData);
 
     // ************ Display the content ******************************
     // Set the title with the location name at the first
@@ -103,7 +105,9 @@ function fetchData(weatherURL){
     document.getElementById("elevation").innerHTML = convertedElevation;
 
     // Set the hourly temperature information
-    // document.getElementById("hourlyUL").innerHTML = buildHourlyData(4, hourly);
+    let date = new Date();
+    let nextHour = date.getHours() + 1;
+    hourlyUL.innerHTML = buildHourlyData(nextHour, hourlyData);
 
     // Change the status of the containers
     pageContent.setAttribute('class', ''); // removes the hide class
