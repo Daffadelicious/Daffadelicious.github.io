@@ -2,6 +2,10 @@
 *  Weather Site JavaScript Functions
 ************************************* */
 
+// Key for Rexburg: krxe
+// Example: data.properties.temperature.value;
+// Create function that converts Celcius to Fahrenheit
+
 "use strict";
 
 // DOM structures from webpage
