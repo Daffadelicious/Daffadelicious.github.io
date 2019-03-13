@@ -33,7 +33,7 @@ html {
     border-radius: 15px;
   }
 
-#pageHeader {
+#page-header {
     display: flex;
     background-color: #0E89D5;
 }
