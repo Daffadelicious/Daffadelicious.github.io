@@ -53,7 +53,7 @@ function fetchData(weatherURL){
 
     // Get the current conditions
     let precipitation = g.Precip;
-    let weather = g.Summary;
+    let weather = g.summary;
     // Test
     console.log("It is currently " + weather + " and the precipitation is " + precipitation);
 
