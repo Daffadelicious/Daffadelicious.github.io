@@ -3,10 +3,17 @@
 ************************************* */
 
 // Key for Rexburg: krxe
-// Example: data.properties.temperature.value;
+// Example: data.properties.temperature.value; data.properties.windSpeed.value;
 // Create function that converts Celcius to Fahrenheit
 
 "use strict";
+
+// Set global variable for custom ehader required by NWS API
+var idHeader = {
+    headers: {
+        "User-Agent": "Student Learning Project - mar18016@byui.edu"
+    }
+};
 
 // DOM structures from webpage
 let pageNav = document.getElementById('page-nav');
@@ -15,6 +22,7 @@ let contentContainer = document.getElementById('page-content');
 
 let weatherURL = "/weather/js/weather.json";
 fetchData(weatherURL);
+
 function fetchData(weatherURL){
     let cityName = 'Greenville'; // The data we want from the weather.json file
     fetch(weatherURL)
