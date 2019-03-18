@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title id="pageTitle"> | Weather Site</title>
-        <meta name="description" content="Weather page for Franklin Idaho">
+        <meta name="description" content="Weather page current location">
         <meta name="viewport" content="width=device-width">
         <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen">
         <link href="css/normalize.css" rel="stylesheet" type="text/css" media="screen">
     </head>
+    <!-- BriAnna Marsh, Maren Stewart, Chad Carroll -->
     <body>
         <header id="page-header">
             <img id="logo" alt="Weather Site logo" src= "/weather/images/logo-transparent-background.png">
@@ -15,7 +16,7 @@
         </header>
         <nav id="page-nav">
             <ul>
-                <li><a href="index.html" title="Go to Weather Site home page">Current</a></li>
+                <li><a href="index.html" title="Go to Weather Site home page">Current weather</a></li>
                 <li><a href="franklin.html" title="Go to Search Page">Search</a></li>
                 <li><a href="franklin.html" title="Go to Franklin's weather page">Franklin</a></li>
                 <li><a href="greenville.html" title="Go to Greenville's weather page">Greenville</a></li>
@@ -23,7 +24,7 @@
         </nav>
         <section id="statusMessage" class="">Please be patient while I get your weather information.</section>
         <main id="pageContent" class="hide">
-            <h2 id="pageHeader">Franklin, Idaho</h2>
+            <h2 id="pageHeader">Current Location</h2>
                 <ul>
                     <li><strong>Zip: </strong>83237 | </li>
                     <li><strong>Elevation: </strong><span id="elevation">1514.246</span> ft. | </li>
@@ -56,9 +57,9 @@
             </section>
         </main>
         <footer>
-            &copy; 2/1/2019 &mdash; The Weather Site
+            &copy; 3/18/2019 &mdash; The Weather Site
         </footer>
         <script src="/weather/js/functions.js"></script>
-        <script src="/weather/js/localdata.js"></script>
+        <script src="/weather/js/geo_loc.js"></script>
     </body> 
 </html>
