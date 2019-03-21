@@ -154,7 +154,7 @@ function time_format(hour){
 console.log("test");
 
 // Build the hourly temperature list
-function buildHourlyData(nextHour,hourlyTemps) {
+function buildHourlyData(nextHour, hourlyTemps) {
     // Data comes from a JavaScript object of hourly temp name - value pairs
     // Next hour should have a value between 0-23
     // The hourlyTemps variable holds an array of temperatures
@@ -416,7 +416,11 @@ function buildPage(){
 
 
     // SET HOURLY INFORMATION
-    
+    // Set the hourly temperature information
+    let date = new Date();
+    let nextHour = date.getHours() + 1;
+    let hourlyData = storage.getItem("hourly");
+    hourlyUL.innerHTML = (nextHour, hourlyData);
 
     // Change the status of the containers
     pageContent.setAttribute('class', ''); // removes the hide class
