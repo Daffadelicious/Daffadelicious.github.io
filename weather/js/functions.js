@@ -267,12 +267,10 @@ function getWeather(stationId){
         console.log(data);
 
         // Store weather information 
-        let temperature = data.properties.temperature.value;
         let curWeather = data.properties.textDescription;
         let windGust = data.properties.windGust.value;
 
         // Local storage
-        storage.setItem("temperature", temperature);
         storage.setItem("curWeather", curWeather);
         storage.setItem("windGust", windGust);
     })
@@ -302,11 +300,13 @@ function getHourly(hourlyLink){
             // Get Wind Direction
             let windDirection = data.properties.periods[0].windDirection;
             let windSpeed = data.properties.periods[0].windSpeed;
+            let temperature = data.properties.periods[0].temperature;
 
             // Local Storage
             storage.setItem("hourly", hourly);
             storage.setItem("windDirection", windDirection);
             storage.setItem("windSpeed", windSpeed);
+            storage.setItem("temperature", temperature);
         })
         .catch(error => console.log("There was a getHourly error: ", error))
 }
@@ -338,9 +338,70 @@ function getForecast(forecastURL){
         })
         .catch(error => console.log("There was a getForecast error: ", error))
 }
-
+buildPage();
 function buildPage(){
 
+    // SET TITLE INFORMATION
+    let pageTitle = document.getElementById('pageTitle');
+    // Combine state and city
+    let fullName = storage.getItem("locName") + ", " + storage.getItem("locState");
+    let fullNameNode = document.createTextNode(fullName);
+    // Change title and h1
+    pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
+    document.getElementById('pageHeader').innerHTML = fullName;
+    
+    // SET LOCATION INFORMATION
+    // Set elevation
+    let se = storage.getItem("stationElevation");
+    let elevation = convertMeters(se);
+    document.getElementById("elevation").innerHTML = elevation;
+    console.log("Elevation in feet: " + elevation);
+    // Set location
+    let lat = storage.getItem("")
+
+
+    // SET TEMPERATURE INFORMATION
+    let curTemp = storage.getItem("temperature");
+    // Set high temp
+    document.getElementById("high").innerHTML = storage.getItem("high") + "&deg;F";
+    // Set low temp
+    document.getElementById("low").innerHTML = storage.getItem("low") + "&deg;F";
+    // Set current temp
+    document.getElementById("curTemp").innerHTML = curTemp + "&deg;F";
+    
+
+    // SET WIND INFORMATION
+    let windSpeed = storage.getItem("windSpeed");
+    let ws = windSpeed.charAt(0);
+    // Set gusts (This needs to be refined)
+    document.getElementById("gusts").innerHTML = storage.getItem("windGust") + " mph";
+    // Set wind speed
+    document.getElementById("mph").innerHTML = windSpeed;
+    // Set wind direction
+    let windDirection = storage.getItem("windDirection");
+    document.getElementById("direction").innerHTML = windDirection
+    // Change dial direction
+    windDial(windDirection);
+    // Set feels like
+    document.getElementById("feelsLike").innerHTML = buildWC(ws, curTemp);
+
+
+    // SET WEATHER INFORMATION
+    let curWeather = storage.getItem("curWeather");
+    // Set summary title
+    document.getElementById("weatherTitle").innerHTML = curWeather;
+    // Set summary image
+    let summary = getCondition(curWeather);
+    changeSummaryImage(summary);
+    // Test
+    console.log("Weather description is: " + curWeather);
+
+
+    // SET HOURLY INFORMATION
+
+    // Change the status of the containers
+    pageContent.setAttribute('class', ''); // removes the hide class
+    statusMessage.setAttribute('class', 'hide'); // hides the status container
 }
 
 function convertToFahrenheit(c){

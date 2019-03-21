@@ -13,6 +13,10 @@ function getGeoLocation(){
             const lat = position.coords.latitude;
             const long = position.coords.longitude;
 
+            // Local storage
+            storage.setItem("latitude", lat);
+            storage.setItem("longitude", long);
+
             // Combine values
             const locale = lat + "," + long;
             console.log(`Lat and Long are: ${locale}.`);
