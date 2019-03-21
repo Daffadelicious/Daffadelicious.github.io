@@ -160,12 +160,12 @@ function buildHourlyData(nextHour, hourlyTemps) {
     // The hourlyTemps variable holds an array of temperatures
     // Line 8 builds a list item showing the time for the next hour 
     // and then the first element (value in index 0) from the hourly temps array
-    let hourlyListItems = '<li>' + time_format(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>' + " | ";
+    let hourlyListItems = '<li>' + time_format(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>' + "  |  ";
     // Build the remaining list items using a for loop
     for (let i = 1, x = hourlyTemps.length; i < x; i++) {
-        hourlyListItems += '<li>' + time_format(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>' + " | ";
+        hourlyListItems += '<li>' + time_format(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>' + "  |  ";
     }
-    console.log('HourlyList is: ' +hourlyListItems);
+    // console.log('HourlyList is: ' +hourlyListItems);
     return hourlyListItems;
     }
 
@@ -417,10 +417,16 @@ function buildPage(){
 
     // SET HOURLY INFORMATION
     // Set the hourly temperature information
+    // Create new date and get the hour
     let date = new Date();
     let nextHour = date.getHours() + 1;
-    let hourlyData = storage.getItem("hourly");
-    hourlyUL.innerHTML = (nextHour, hourlyData);
+    // Get hourly data
+    let hourlyStorage = storage.getItem("hourly");
+    // Convert into array
+    let hourlyData = hourlyStorage.split(",");
+    console.log(hourlyData);
+    // Call function to buildHourlyData and set it on website
+    hourlyUL.innerHTML = buildHourlyData(nextHour, hourlyData);
 
     // Change the status of the containers
     pageContent.setAttribute('class', ''); // removes the hide class
