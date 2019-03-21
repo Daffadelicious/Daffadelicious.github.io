@@ -171,7 +171,7 @@ function buildHourlyData(nextHour,hourlyTemps) {
 
 
 
-// Set global variable for custom ehader required by NWS API
+// Set global variable for custom header required by NWS API
 var idHeader = {
     headers: {
         "User-Agent": "Student Learning Project - mar18016@byui.edu"
@@ -205,6 +205,10 @@ function getLocation(locale){
             // Get link to hourly data
             let hourlyLink = data.properties.forecastHourly;
             getHourly(hourlyLink);
+
+            // Get link to forecast
+            let forecastURL = data.properties.forecast;
+            getForecast(forecastURL);
 
             // Get link to weather station ID
             let stationsURL = data.properties.observationStations;
@@ -264,22 +268,13 @@ function getWeather(stationId){
 
         // Store weather information 
         let temperature = data.properties.temperature.value;
-        let curWeather = data.properties.temperature.textDescription;
-        let windSpeed = data.properties.windSpeed.value;
-        let windDirection = data.properties.windDirection.value;
-        // Comment out these three if error
+        let curWeather = data.properties.textDescription;
         let windGust = data.properties.windGust.value;
-        let high = data.properties.maxTemperatureLast24Hours.value;
-        let low = data.properties.minTemperatureLast24Hours.value;
 
         // Local storage
         storage.setItem("temperature", temperature);
         storage.setItem("curWeather", curWeather);
-        storage.setItem("windSpeed", windSpeed);
-        storage.setItem("windDirection", windDirection);
         storage.setItem("windGust", windGust);
-        storage.setItem("high", high);
-        storage.setItem("low", low);
     })
     .catch(error => console.log("There was a getWeather error: ", error))
 }
@@ -304,7 +299,51 @@ function getHourly(hourlyLink){
                 hourly[i] = data.properties.periods[i].temperature;
             }
             
+            // Get Wind Direction
+            let windDirection = data.properties.periods[0].windDirection;
+            let windSpeed = data.properties.periods[0].windSpeed;
+
             // Local Storage
             storage.setItem("hourly", hourly);
+            storage.setItem("windDirection", windDirection);
+            storage.setItem("windSpeed", windSpeed);
         })
+        .catch(error => console.log("There was a getHourly error: ", error))
+}
+
+function getForecast(forecastURL){
+    fetch(forecastURL)
+        .then(function(response){
+            if(response.ok){
+                return response.json();
+            }
+            throw new Error("Response not OK.");
+        })
+        .then(function(data) {
+            // Check 
+            console.log("Object from getForecast function: ");
+            console.log(data);
+
+            // Store Forecast information
+            let high = data.properties.periods[0].temperature;
+            let low = data.properties.periods[1].temperature;
+            let icon = data.properties.periods[0].icon;
+            let detailedForecast = data.properties.periods[0].detailedForecast;
+
+            // Local storage
+            storage.setItem("high", high);
+            storage.setItem("low", low);
+            storage.setItem("icon", icon);
+            storage.setItem("detailedForecast", detailedForecast);
+        })
+        .catch(error => console.log("There was a getForecast error: ", error))
+}
+
+function buildPage(){
+
+}
+
+function convertToFahrenheit(c){
+    let f = c * (9/5) + 32;
+    return f;
 }
