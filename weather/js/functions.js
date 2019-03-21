@@ -357,7 +357,25 @@ function buildPage(){
     document.getElementById("elevation").innerHTML = elevation;
     console.log("Elevation in feet: " + elevation);
     // Set location
-    let lat = storage.getItem("")
+    let lat = storage.getItem("latitude");
+    let long = storage.getItem("longitude");
+    let latCardinal = "";
+    let longCardinal = "";
+    lat = Math.round(lat * 100) / 100;
+    long = Math.round(long * 100) / 100; 
+    if(Math.sign(lat) == 1){
+        latCardinal = "&deg;N, "
+    }
+    else{
+        latCardinal = "&deg;S, "
+    }
+    if(Math.sign(long) == 1){
+        longCardinal = "&deg;E | "
+    }
+    else{
+        longCardinal = "&deg;W | "
+    }
+    document.getElementById("location").innerHTML = lat + latCardinal + long + longCardinal;
 
 
     // SET TEMPERATURE INFORMATION
@@ -398,6 +416,7 @@ function buildPage(){
 
 
     // SET HOURLY INFORMATION
+    
 
     // Change the status of the containers
     pageContent.setAttribute('class', ''); // removes the hide class
