@@ -113,7 +113,7 @@ body{
     height: 150px;
     width: 150px;
     background: no-repeat center/85% url('/weather/images/wind-pointer.png');
-    z-index: 100;
+    /* z-index: 100; */
     margin: -.6em auto 0;
 }
 
@@ -151,7 +151,7 @@ body{
 }
 
 #curWeather{
-    background-image: url(/weather/images/rain_300.jpg);
+    /* background-image: url(/weather/images/rain_300.jpg); */
     background-size: 1500px;
     text-align: center;
 }

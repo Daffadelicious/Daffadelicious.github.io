@@ -112,21 +112,27 @@ function getCondition(phrase){
 function changeSummaryImage(weather){
     // Get the picture container
     const weatherPic = document.getElementById("weatherPic");
+    const curWeather = document.getElementById("curWeather");
     switch(weather){
         case "Clear":
         weatherPic.setAttribute("class", "clear");
+        curWeather.setAttribute("class", "clear");
         break;
         case "Clouds":
         weatherPic.setAttribute("class", "cloudy");
+        curWeather.setAttribute("class", "cloudy");
         break;
         case "Fog":
         weatherPic.setAttribute("class", "fog");
+        curWeather.setAttribute("class", "fog");
         break;
         case "Rain":
         weatherPic.setAttribute("class", "rain");
+        curWeather.setAttribute("class", "rain");
         break;
         case "Snow":
         weatherPic.setAttribute("class", "snow");
+        curWeather.setAttribute("class", "snow");
         break;
     }
 }   
@@ -278,7 +284,7 @@ function getWeather(stationId){
 }
 
 function getHourly(hourlyLink){
-    fetch(hourlyLink)
+    fetch(hourlyLink, idHeader)
         .then(function(response){
             if(response.ok){
                 return response.json();
@@ -312,7 +318,7 @@ function getHourly(hourlyLink){
 }
 
 function getForecast(forecastURL){
-    fetch(forecastURL)
+    fetch(forecastURL, idHeader)
         .then(function(response){
             if(response.ok){
                 return response.json();
@@ -338,6 +344,7 @@ function getForecast(forecastURL){
         })
         .catch(error => console.log("There was a getForecast error: ", error))
 }
+
 buildPage();
 function buildPage(){
 
@@ -406,6 +413,7 @@ function buildPage(){
     document.getElementById("direction").innerHTML = windDirection
     // Change dial direction
     windDial(windDirection);
+
     // Set feels like
     document.getElementById("feelsLike").innerHTML = buildWC(ws, curTemp);
 
