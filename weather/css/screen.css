@@ -83,7 +83,7 @@ nav ul li a{
     padding-left: 3px;
     display: flex;
     list-style: none;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 body{
@@ -170,7 +170,6 @@ body{
 
 .cloudy{
     background-image: url("/weather/images/clouds_300.jpg");
-    height: 320px;
 }
 
 .fog{
@@ -179,7 +178,6 @@ body{
 
 .rain{
     background-image: url("/weather/images/rain_300.jpg");
-    height: 220px;
 }
 
 .snow{
