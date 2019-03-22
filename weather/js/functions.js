@@ -362,7 +362,7 @@ function buildPage(){
     let latCardinal = "";
     let longCardinal = "";
     lat = Math.round(lat * 100) / 100;
-    long = Math.round(long * 100) / 100; 
+    long = Math.round(long * 100) / 100;
     if(Math.sign(lat) == 1){
         latCardinal = "&deg;N, "
     }
@@ -375,18 +375,21 @@ function buildPage(){
     else{
         longCardinal = "&deg;W | "
     }
+    console.log("Updated lat and long are: " + lat + ", " + long); 
     document.getElementById("location").innerHTML = lat + latCardinal + long + longCardinal;
 
 
     // SET TEMPERATURE INFORMATION
     let curTemp = storage.getItem("temperature");
     // Set high temp
-    document.getElementById("high").innerHTML = storage.getItem("high") + "&deg;F";
+    let high = storage.getItem("high");
+    document.getElementById("high").innerHTML = high + "&deg;F";
     // Set low temp
-    document.getElementById("low").innerHTML = storage.getItem("low") + "&deg;F";
+    let low = storage.getItem("low");
+    document.getElementById("low").innerHTML = low + "&deg;F";
     // Set current temp
     document.getElementById("curTemp").innerHTML = curTemp + "&deg;F";
-    
+    console.log("Current temperature is " + curTemp + ", High: " + storage.getItem("high") + ", Low: " + storage.getItem("low"));
 
     // SET WIND INFORMATION
     let windSpeed = storage.getItem("windSpeed");
