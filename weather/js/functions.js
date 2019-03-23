@@ -388,14 +388,11 @@ function buildPage(){
 
     // SET TEMPERATURE INFORMATION
     let curTemp = storage.getItem("temperature");
-    curTemp = Math.floor(curTemp);
     // Set high temp
     let high = storage.getItem("high");
-    high = Math.floor(high);
     document.getElementById("high").innerHTML = high + "&deg;F";
     // Set low temp
     let low = storage.getItem("low");
-    low = Math.floor(low);
     document.getElementById("low").innerHTML = low + "&deg;F";
     // Set current temp
     document.getElementById("curTemp").innerHTML = curTemp + "&deg;F";
@@ -412,7 +409,7 @@ function buildPage(){
     let windDirection = storage.getItem("windDirection");
     document.getElementById("direction").innerHTML = windDirection
     // Change dial direction
-    windDial(windDirection);
+    windDial(windDirection); 
 
     // Set feels like
     document.getElementById("feelsLike").innerHTML = buildWC(ws, curTemp);
