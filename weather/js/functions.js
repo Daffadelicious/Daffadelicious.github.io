@@ -341,11 +341,13 @@ function getForecast(forecastURL){
             storage.setItem("low", low);
             storage.setItem("icon", icon);
             storage.setItem("detailedForecast", detailedForecast);
+
+            // Call buildpage
+            buildPage();
         })
         .catch(error => console.log("There was a getForecast error: ", error))
 }
 
-buildPage();
 function buildPage(){
 
     // SET TITLE INFORMATION
