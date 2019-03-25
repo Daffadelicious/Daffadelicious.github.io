@@ -1,0 +1,54 @@
+/* CSS for ACME Site*/
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
+
+/* General Rules */
+
+html{
+    background-image: url("/acme/images/site/background.jpg");
+    background-size: cover;
+}
+
+header{
+    margin: 5px;
+}
+
+body{
+    background-color: white;
+    width: 90%;
+    margin: auto;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    background-color: #da2129;
+    color: white;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+nav ul li{
+    margin-right: 20px;
+}
+
+h1{
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 30px;
+}
+
+footer{
+    border-top: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+footer p{
+   margin: 8px 0px 5px 0px; 
+}
