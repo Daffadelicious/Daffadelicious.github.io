@@ -6,7 +6,7 @@ getGeoLocation();
 // Get longitude and  latitude
 function getGeoLocation(){
     const status = document.getElementById('statusMessage');
-    status.innerHTML = "Getting Location...... this website works, you just need to refresh kthxbye"
+    status.innerHTML = "Getting Location...... this website works, you just need to refresh kthxbye";
 
     if (navigator.geolocation){
         navigator.geolocation.getCurrentPosition(function (position){
