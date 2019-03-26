@@ -115,7 +115,7 @@ footer{
 }
 
 footer p{
-   margin: 3px 0px 3px 0px;
+   margin: 2px 0px 0px 0px;
 }
 
 /* Larger Rules */
@@ -124,14 +124,48 @@ footer p{
         background-size: cover;
     }
 
+    body{
+        width:80%;
+        margin: auto; 
+    }
+
     nav ul{
         font-size: 20px;
-        height: 40px;
+        height: 50px;
         margin: 0px;
     }
 
     h1{
         font-size: 35px;
+    }
+
+    #featured{
+        background-size: cover;
+        height: 500px;
+        padding-left: 33%;
+    }
+
+    #actionbtn{
+        width: auto;
+    }
+
+    h3{
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    #featured ul{
+        font-size: 25px;
+        font-weight: lighter;
+    }
+
+    #featured ul li{
+        background: none;
+    }
+
+    #reverse{
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     footer{
