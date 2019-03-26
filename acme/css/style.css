@@ -11,8 +11,12 @@ html{
 
 body{
     background-color: white;
-    width: 90%;
+    width: 95%;
     margin: auto;
+}
+
+#logo{
+    width: 280px;
 }
 
 nav ul{
@@ -36,7 +40,69 @@ nav ul li{
 h1{
     font-family: 'Allerta Stencil', sans-serif;
     font-size: 22px;
-    margin: 5px 0px 5px 10px;
+    margin: 5px;
+}
+
+#featured{
+    background-image: url("../images/site/feature.jpg");
+    background-size: cover;
+    height: 150px;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+#featured ul{
+    padding-left: 50%;
+    list-style: none;
+    color: #990033;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0px;
+}
+
+#featured ul li{
+    padding: 3px 0px 0px 5px;
+    background: rgba(255, 255, 255, .5);
+}
+
+#actionbtn{
+    width: 170px;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px 0px 5px;
+    font-size: 20px;
+    padding-right: 60px;
+}
+
+#reviews ul{
+    margin: 0;
+    font-size: 15px;
+}
+
+#recipes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #80808085;
+    width: 35%;
+    margin: 5px;
+}
+
+figcaption{
+    background-color: white;
+    text-align: center;
 }
 
 footer{
@@ -45,6 +111,7 @@ footer{
     flex-direction: column;
     text-align: center;
     font-size: 11px;
+    margin-top: 5px;
 }
 
 footer p{
