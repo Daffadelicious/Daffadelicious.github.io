@@ -17,6 +17,7 @@ body{
 
 #logo{
     width: 280px;
+    margin-left: 5px;
 }
 
 nav ul{
@@ -165,7 +166,37 @@ footer p{
 
     #reverse{
         display: flex;
-        flex-direction: column-reverse;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    #recipeHeader{
+        padding-right: 80px;
+    }
+
+    #recipes{
+        order: 0;
+        padding-left: 100px;
+        width: 400px;
+    }
+
+    figure{
+        width: 40%;
+    }
+
+    figcaption{
+        height: 100%;
+        width: 100%;
+    }
+
+    #reviews{
+        order: 1;
+    }
+
+    #reviews ul li{
+        font-size: 20px;
     }
 
     footer{
