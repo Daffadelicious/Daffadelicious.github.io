@@ -130,27 +130,40 @@ footer p{
 }
 
 /* CSS for items page */
-#item{
+#flex{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
+}
+
+#itemHeader{
+    font-size: 30px;
+    padding: 0px;
 }
 
 #itemPicture{
     width: 50%;
-    margin: auto;
-    padding: 10px;
 }
 
 #description{
     width: 90%;
-    margin: auto;
+    margin: 10px 0px 0px 0px;
 }
 
 #itemList{
     list-style: none;
+    align-self: flex-start;
+    padding-left: 15px;
 }
 
+#price{
+    align-self: flex-start;
+    padding: 0px 0px 5px 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #990033;
+    margin: 0px;
+}
 
 /* Larger Rules */
 @media screen and (min-width: 700px){
@@ -230,6 +243,26 @@ footer p{
 
     #reviews ul li{
         font-size: 20px;
+    }
+
+    #flex{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #itemPicture{
+        height: 300px;
+        width: auto;
+        margin: 10px;
+    }
+
+    #description{
+        width: 60%;
+    }
+
+    #itemList{
+        align-self: center;
+        justify-self: center;
     }
 
     footer{
