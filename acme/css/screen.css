@@ -5,6 +5,10 @@
 
 /* General Rules */
 
+.hide{
+    display: none;
+}
+
 html{
     background-image: url("/acme/images/site/background.jpg");
 }
@@ -92,6 +96,10 @@ h2{
     flex-wrap: wrap;
 }
 
+#recipeHeader{
+    padding-right: 100px;
+}
+
 figure{
     display: flex;
     flex-direction: column;
@@ -103,6 +111,8 @@ figure{
 
 figcaption{
     background-color: white;
+    width: 100%;
+    height: 100%;
     text-align: center;
 }
 
@@ -118,6 +128,29 @@ footer{
 footer p{
    margin: 2px 0px 0px 0px;
 }
+
+/* CSS for items page */
+#item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#itemPicture{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+#description{
+    width: 90%;
+    margin: auto;
+}
+
+#itemList{
+    list-style: none;
+}
+
 
 /* Larger Rules */
 @media screen and (min-width: 700px){
