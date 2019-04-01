@@ -32,6 +32,6 @@
       "reviews": "4.6"
     },
     "Navigation":{
-      "name": ["Anvils", "Explosives", "Decoys", "Traps"]
+      "name": ["Home", "Anvils", "Explosives", "Decoys", "Traps"]
     }
 }
