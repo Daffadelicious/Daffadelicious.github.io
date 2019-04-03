@@ -41,10 +41,10 @@ function fillNav(navItems){
             ul.appendChild(li);
         }
     // Call clickListeners function
-    clickListeners(navItems);
+    clickListeners();
 }
 
-function clickListeners(items){
+function clickListeners(){
     // When Home is clicked, call clickHome() function
     document.getElementById("navHome").addEventListener("click", clickHome);
 
