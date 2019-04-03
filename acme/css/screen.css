@@ -141,10 +141,6 @@ footer p{
     padding: 0px;
 }
 
-#itemPicture{
-    width: 50%;
-}
-
 #description{
     width: 90%;
     margin: 10px 0px 0px 0px;
@@ -252,10 +248,6 @@ footer p{
 
     #innerContent{
         overflow: hidden;
-    }
-
-    #itemPicture{
-        width: 50%;
     }
 
     footer{

@@ -4,9 +4,8 @@
 let dataURL = "/acme/js/acme.json";
 
 // Call fetchData function
-fetchData(dataURL);
-
-function fetchData(dataURL){
+fetchNavItems(dataURL);
+function fetchNavItems(dataURL){
     fetch(dataURL)
     .then(function(response) {
         if(response.ok){
@@ -21,7 +20,7 @@ function fetchData(dataURL){
 
         // Create an array to hold nav items
         let navItems = [];
-        for(let i=0; i<data.Navigation.name.length; i++){
+        for(let i = 0; i < data.Navigation.name.length; i++){
             navItems[i] = data.Navigation.name[i];
         }
         
