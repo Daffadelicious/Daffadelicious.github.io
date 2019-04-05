@@ -21,7 +21,6 @@
                 Populate the empty html elements with information from the json
 */
 
-
 // Link to json file
 let dataURL = "/acme/js/acme.json";
 
