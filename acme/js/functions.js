@@ -117,6 +117,8 @@ function navClick(event){
             // Set o to data.event's parameter passed from click event (Explosives, Traps, etc)
             let o = data[event.target.myParam];
             console.log("User clicked " + event.target.myParam);
+            console.log("Data being used: ")
+            console.log(o);
 
             document.getElementById("itemHeader").innerHTML = o.name;
             document.getElementById("itemPicture").setAttribute("src", o.path);
