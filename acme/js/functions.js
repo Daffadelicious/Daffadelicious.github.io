@@ -95,6 +95,9 @@ function clickHome(){
     document.getElementById("home").setAttribute("class", "");
     document.getElementById("item").setAttribute("class", "hide");
 
+    let title = document.getElementById("title");
+    title.innerHTML = "ACME Site | Home";
+
     console.log("Home page displayed");
 }
 
@@ -119,6 +122,9 @@ function navClick(event){
             console.log("User clicked " + event.target.myParam);
             console.log("Data being used: ")
             console.log(o);
+
+            let title = document.getElementById("title");
+            title.innerHTML = "ACME Site | " + event.target.myParam;
 
             document.getElementById("itemHeader").innerHTML = o.name;
             document.getElementById("itemPicture").setAttribute("src", o.path);
